@@ -120,3 +120,13 @@ p {
 .book-info a:hover {
     text-decoration: none; 
 }
+
+/* Estilo para o livro aberto */
+.book.open .cover {
+    transform: rotateY(-80deg);
+}
+
+/* Mantenha o hover para desktop */
+.book:hover .cover {
+    transform: rotateY(-80deg);
+}

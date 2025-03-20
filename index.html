@@ -18,7 +18,7 @@
     <div class="book-container">
         <!-- Primeiro Livro -->
         <div class="book-card">
-            <div class="book">
+            <div class="book" onclick="toggleBook(this)">
                 <div class="description">
                     <p>A história se passa no mundo mágico de Nárnia, um reino repleto de criaturas fantásticas, como animais falantes, faunos, centauros e feiticeiras. O mundo é governado por Aslam, um leão nobre e sábio que representa o bem e a justiça. A série acompanha as aventuras de crianças do nosso mundo que, de maneiras diferentes, são transportadas para Nárnia e desempenham papéis cruciais em eventos épicos, como batalhas entre o bem e o mal, a luta pela liberdade e a restauração da paz.</p>
                 </div>
@@ -30,7 +30,7 @@
                 <button class="button">
                     <div class="button-content">
                         <p>Preço: R$ 80,00</p>
-                        <a href="https://www.amazon.com.br/As-Cr%C3%B4nicas-N%C3%A1rnia-Brochura-Lewis/dp/857827069X/ref=sr_1_8?adgrpid=1136895682069568&dib=eyJ2IjoiMSJ9.Ir3vJbAtct0Yehg4jiQl-XTxi4T_T_zS-hdfTAiZHoR_zFcwTdgDzxs3omzYHBWhnhwYIhkNZGbSBa9oB8f_NK9N25R2wQNzuGdLTCmACA2ZR42nvW2GP1Qdno3peuiVywMKm-3ERQnArVVRMpPDS4EQCnlRR8-HHRVgCHIsPJ6iOq_Slv2lULe0aYz8X0ynrJVfGOUrBxrhqzevTGmq2LMZu8DGABkoc-XX1nk0yHwGXi4hpUn5fqYuAKo6smQdDmXbS8S-Uv9vPEapjcl68ANurg2z-XAlFCu9d8ZQ_qhf7OKyKTpNKn17FaizHDmawC6Naz778PBsak8aSFPmUhfF4Q_8olaOS_OVPA6VOgrMyVQv3fL1H7A76vfWhj8MzYNwjLHfUSdRIGCyigW7VN4whPLvc3eocNQDGs9lZrT7sac1BXMv1GQfksBmmxpa.7LUgnkiMnZewUklgDOvw5H9pH7b2hmRxjI0MTvIqFuA&dib_tag=se&hvadid=71056145894129&hvbmt=be&hvdev=c&hvlocphy=147064&hvnetw=o&hvqmt=e&hvtargid=kwd-71056498068881%3Aloc-20&hydadcr=5622_13210448&keywords=narnia+livro&qid=1742508609&sr=8-8" target="_blank">Compre na Amazon</a>
+                        <a href="https://www.amazon.com.br/As-Cr%C3%B4nicas-N%C3%A1rnia-Brochura-Lewis/dp/857827069X" target="_blank">Compre na Amazon</a>
                     </div>
                 </button>
             </div>
@@ -38,7 +38,7 @@
 
         <!-- Segundo Livro -->
         <div class="book-card">
-            <div class="book">
+            <div class="book" onclick="toggleBook(this)">
                 <div class="description">
                     <p>Percy Jackson é um garoto comum que descobre ser um semideus, filho de Poseidon. Ele embarca em aventuras épicas para salvar o mundo dos deuses gregos, enfrentando monstros e desafios mitológicos. A série combina mitologia grega com o mundo moderno, repleta de ação, humor e amizade.</p>
                 </div>
@@ -56,5 +56,12 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // Função para alternar a classe 'open' no livro clicado
+        function toggleBook(book) {
+            book.classList.toggle('open');
+        }
+    </script>
 </body>
 </html>
