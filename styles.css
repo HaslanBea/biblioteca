@@ -1,3 +1,10 @@
+.book-container {
+    display: flex; /* Ativa o Flexbox */
+    justify-content: center; /* Distribui o espaço ao redor dos itens */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se não couberem */
+    padding: 20px; /* Adiciona espaço interno ao redor do container */
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -21,6 +28,8 @@ nav {
     color: #000;
     margin: 20px;
 }
+
+
 
 .cover {
     top: 0;
@@ -68,7 +77,6 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 20px auto; /* Centraliza o botão */
 }
 
 .button:hover::before {
@@ -90,20 +98,25 @@ p {
     width: 100%;
     height: inherit;
     border-radius: inherit;
-    background: linear-gradient(
-        82.3deg,
-        rgba(150, 93, 233, 1) 10.8%,
-        rgba(99, 88, 238, 1) 94.3%
-    );
+    background: #d3d3d3;
     transition: all 0.475s;
+}
+
+.book-info {
+    margin: 30px;
 }
 
 .book-info p {
     margin: 0;
     padding: 0;
+    color: rgb(241, 189, 121);
 }
 
 .book-info a {
-    color: #fff;
+    color: #fffd94;
     text-decoration: none;
+}
+
+.book-info a:hover {
+    text-decoration: none; 
 }
