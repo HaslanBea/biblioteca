@@ -1,8 +1,8 @@
 .book-container {
-    display: flex; /* Ativa o Flexbox */
-    justify-content: center; /* Distribui o espaço ao redor dos itens */
-    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se não couberem */
-    padding: 20px; /* Adiciona espaço interno ao redor do container */
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    padding: 20px;
 }
 
 nav {

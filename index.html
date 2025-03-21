@@ -17,9 +17,9 @@
     </nav>
     <div class="book-container">
         <!-- Primeiro Livro -->
-        <div class="book-card">
-            <div class="book" onclick="toggleBook(this)">
-                <div class="description">
+        <div class="book-card" onclick="toggleBook(this)">
+            <div class="book">
+                <div class="description" onclick="event.stopPropagation(); closeBook(this)">
                     <p>A história se passa no mundo mágico de Nárnia, um reino repleto de criaturas fantásticas, como animais falantes, faunos, centauros e feiticeiras. O mundo é governado por Aslam, um leão nobre e sábio que representa o bem e a justiça. A série acompanha as aventuras de crianças do nosso mundo que, de maneiras diferentes, são transportadas para Nárnia e desempenham papéis cruciais em eventos épicos, como batalhas entre o bem e o mal, a luta pela liberdade e a restauração da paz.</p>
                 </div>
                 <div class="cover">
@@ -37,9 +37,9 @@
         </div>
 
         <!-- Segundo Livro -->
-        <div class="book-card">
-            <div class="book" onclick="toggleBook(this)">
-                <div class="description">
+        <div class="book-card" onclick="toggleBook(this)">
+            <div class="book">
+                <div class="description" onclick="event.stopPropagation(); closeBook(this)">
                     <p>Percy Jackson é um garoto comum que descobre ser um semideus, filho de Poseidon. Ele embarca em aventuras épicas para salvar o mundo dos deuses gregos, enfrentando monstros e desafios mitológicos. A série combina mitologia grega com o mundo moderno, repleta de ação, humor e amizade.</p>
                 </div>
                 <div class="cover">
@@ -58,9 +58,18 @@
     </div>
 
     <script>
-        // Função para alternar a classe 'open' no livro clicado
-        function toggleBook(book) {
+        // Função para alternar a classe 'open' no card clicado
+        function toggleBook(card) {
+            const book = card.querySelector('.book');
             book.classList.toggle('open');
+        }
+
+        // Função para fechar o livro ao clicar na descrição
+        function closeBook(description) {
+            const book = description.closest('.book');
+            if (book.classList.contains('open')) {
+                book.classList.remove('open');
+            }
         }
     </script>
 </body>
